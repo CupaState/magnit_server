@@ -1,6 +1,3 @@
-// boost
-#include <boost/asio.hpp>
-
 // local
 #include "server.h"
 #include "tcp_connection.h"
@@ -12,7 +9,7 @@ int main(void)
 {
 	try
 	{
-		io_context io_context;
+		boost::asio::io_context io_context;
 		TcpServer server(io_context, PORT);
 		io_context.run();
 	}
